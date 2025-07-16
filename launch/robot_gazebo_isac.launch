@@ -1,0 +1,52 @@
+
+<launch>
+    <arg name="world" default="ROS-Academy" doc="ISCAS_building, ROS-Academy, small_city"/>
+    <arg name="paused" default="false"/>
+    <arg name="use_sim_time" default="true"/>
+    <arg name="gui" default="true"/>
+    <arg name="headless" default="false"/>
+    <arg name="debug" default="false"/>
+
+    <!-- Include Gazebo's empty world launch -->
+    <include file="$(find gazebo_ros)/launch/empty_world.launch">
+        <arg name="world_name" value="$(find robot_second)/world/$(arg world).world"/>
+        <arg name="paused" value="$(arg paused)"/>
+        <arg name="use_sim_time" value="$(arg use_sim_time)"/>
+        <arg name="gui" value="$(arg gui)"/>
+        <arg name="headless" value="$(arg headless)"/>
+    </include>
+
+    <!-- Spawn the robot -->
+    <param name="robot_description" command="rosrun xacro xacro $(find robot_second)/urdf/robot_urdf.xacro"/>
+    <node name="spawn_urdf_robot_second" pkg="gazebo_ros" type="spawn_model" args="-urdf -model your_robot_name -param robot_description" />
+
+    <!-- Add joint_state_publisher -->
+    <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher"/>
+
+    <!-- Add robot_state_publisher -->
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
+</launch>
+
+
+
+<!-- <launch>
+    <arg name="world" default="ROS-Academy" doc="ISCAS_building, ROS-Academy, small_city"/>
+    <arg name="paused" default="false"/>
+    <arg name="use_sim_time" default="true"/>
+    <arg name="gui" default="true"/>
+    <arg name="headless" default="false"/>
+    <arg name="debug" default="false"/>
+
+    
+    <include file="$(find gazebo_ros)/launch/empty_world.launch">
+        <arg name="world_name" value="$(find robot_second)/world/$(arg world).world"/>
+        <arg name="paused" value="$(arg paused)"/>
+        <arg name="use_sim_time" value="$(arg use_sim_time)"/>
+        <arg name="gui" value="$(arg gui)"/>
+        <arg name="headless" value="$(arg headless)"/>
+    </include>
+
+    
+    <param name="robot_description" command="rosrun xacro xacro $(find robot_second)/urdf/robot_urdf.xacro"/>
+    <node name="spawn_urdf_robot_second" pkg="gazebo_ros" type="spawn_model" args="-urdf -model your_robot_name -param robot_description" />
+</launch> -->

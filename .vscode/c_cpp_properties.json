@@ -1,0 +1,25 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/seher/cus_ws/devel/include/**",
+        "/home/seher/Luq_ws/devel/include/**",
+        "/home/seher/ros_wiki/devel/include/**",
+        "/opt/ros/noetic/include/**",
+        "/home/seher/catkin_ws/src/car-like-robot-gazebo/robot_gazebo/include/**",
+        "/home/seher/catkin_ws/src/car-like-robot-gazebo/velodyne_simulator/velodyne_gazebo_plugins/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}
