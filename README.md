@@ -75,4 +75,4 @@ robot_second/
 ```
 <img width="1473" height="1218" alt="Screenshot from 2025-07-16 14-53-40" src="https://github.com/user-attachments/assets/f0cfa700-33a0-49c6-929d-f21af8671340" />
 <img width="1049" height="1175" alt="Screenshot from 2025-07-16 14-53-26" src="https://github.com/user-attachments/assets/a77281ed-3c16-4911-8fd6-f12fb858b7bc" />
-<img width="1654" height="929" alt="Screenshot from 2025-07-15 20-10-45" src="https://github.com/user-attachments/assets/fd24d223-b6a6-4b89-9520-ebbb4c9163e2" />
+
